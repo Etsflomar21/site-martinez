@@ -7,7 +7,8 @@ font-family:'Segoe UI',sans-serif;
 
 html,body{
 height:100%;
-overflow:hidden;
+margin:0;
+padding:0;
 }
 
 body{
@@ -126,6 +127,13 @@ text-align:center;
 color:#003b7a;
 }
 
+.hero h2{
+    color:#003b7a;
+    margin-top:8px;
+    font-size:20px;
+    font-weight:700;
+}
+
 .hero p{
 font-size:13px;
 color:#555;
@@ -141,11 +149,17 @@ padding:12px;
 }
 
 .card{
-background:white;
-border-radius:12px;
-padding:15px;
-text-align:center;
-box-shadow:0 2px 8px rgba(0,0,0,.08);
+    background:white;
+    border-radius:15px;
+    padding:15px;
+    text-align:center;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 10px 25px rgba(0,59,122,.15);
 }
 
 .card i{
@@ -251,6 +265,136 @@ align-items:center;
         0 0 20px rgba(79,195,255,.8),
         0 0 30px rgba(79,195,255,.6);
 
+    }
+
+}
+/* =========================
+   RESPONSIVE TABLET
+========================= */
+
+@media (max-width:1024px){
+
+    .services{
+        grid-template-columns:repeat(2,1fr);
+        grid-template-rows:auto;
+    }
+
+    header{
+        padding:0 15px;
+    }
+
+}
+
+/* =========================
+   RESPONSIVE MOVIL
+========================= */
+
+@media (max-width:768px){
+
+    body{
+        overflow-y:auto;
+    }
+
+    header{
+        flex-direction:column;
+        height:auto;
+        padding:15px;
+        gap:15px;
+    }
+
+    .logo{
+        justify-content:center;
+    }
+
+    .logo img{
+        width:50px;
+        height:50px;
+    }
+
+    .logo-text{
+        font-size:20px;
+    }
+
+    nav{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:12px;
+    }
+
+    nav a{
+        font-size:13px;
+    }
+
+    .stats{
+        grid-template-columns:repeat(2,1fr);
+        height:auto;
+    }
+
+    .stat{
+        padding:15px 0;
+    }
+
+    .hero{
+        height:auto;
+        padding:20px;
+    }
+
+    .hero h1{
+        font-size:24px;
+    }
+
+    .hero p{
+        font-size:14px;
+        line-height:1.6;
+    }
+
+    .services{
+        display:grid;
+        grid-template-columns:1fr;
+        gap:15px;
+        padding:15px;
+    }
+
+    .card{
+        padding:20px;
+    }
+
+    .card i{
+        font-size:40px;
+    }
+
+    footer{
+        height:auto;
+        flex-direction:column;
+        gap:10px;
+        padding:15px;
+    }
+
+    .whatsapp-float{
+        width:60px;
+        height:60px;
+        font-size:30px;
+    }
+
+}
+
+/* =========================
+   CELULARES PEQUEÑOS
+========================= */
+
+@media (max-width:480px){
+
+    .logo-text{
+        font-size:16px;
+        letter-spacing:1px;
+    }
+
+    .hero h1{
+        font-size:20px;
+    }
+
+    .hero p{
+        font-size:13px;
     }
 
 }
